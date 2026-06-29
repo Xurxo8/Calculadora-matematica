@@ -1,5 +1,6 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
@@ -30,6 +31,10 @@ body{
       border: none;
       border-bottom: 2px solid var(--teal);
       outline: none;
+      caret-color: var(--teal);
+      font-size: 50px;
+      color: var(--teal);
+      text-align: end;
     }
 
     /* ===== TECLADO ===== */
@@ -48,16 +53,21 @@ body{
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 25px;
+        font-size: 35px;
         border-radius: 5px;
         background-color: transparent;
         font-weight: bolder;
         color: var(--teal);
         border: none;
+
+        & img{
+          width: 70%;
+          height: 70%;
+        }
       }
 
       & .boton:hover{
-        border: 2px solid var(--teal);
+        outline: 2px solid var(--teal); /* igual que border pero sen ocupar espacio */
       }
     }
   }
