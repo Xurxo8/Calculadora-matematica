@@ -1,0 +1,74 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root{
+  --branco: #f0f0f0;
+  --negro: #111;
+  --gris: #555;
+  --teal: teal;
+}
+
+body{
+  background-color: var(--negro);
+
+  #calculadora{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+    width: 20%;
+    height: 65%;
+
+    /* === PANTALLA === */
+    & #pantalla{
+      height: 15%;
+      width: 100%;
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid var(--teal);
+      outline: none;
+      caret-color: var(--teal);
+      font-size: 50px;
+      color: var(--teal);
+      text-align: end;
+    }
+
+    /* ===== TECLADO ===== */
+    & #teclado{
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-rows: repeat(5, minmax(0, 1fr));
+      place-items: center;
+      height: 80%;
+      margin-top: 10px;
+
+      /* === BOTONS === */
+      & .boton{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 35px;
+        border-radius: 5px;
+        background-color: transparent;
+        font-weight: bolder;
+        color: var(--teal);
+        border: none;
+
+        & img{
+          width: 70%;
+          height: 70%;
+        }
+      }
+
+      & .boton:hover{
+        outline: 2px solid var(--teal); /* igual que border pero sen ocupar espacio */
+      }
+    }
+  }
+}
